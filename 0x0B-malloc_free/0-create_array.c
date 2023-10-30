@@ -17,7 +17,7 @@ char *create_array(unsigned int size, char c) {
     
     ar = malloc(size * sizeof(char));
     if (ar == NULL) {
-        return NULL; // Handle memory allocation failure
+        return NULL;
     }
 
     for (unsigned int i = 0; i < size; i++) {
