@@ -11,22 +11,23 @@
 char *_strdup(char *str)
 {
 	char *new_str;
-	int len =0;
+	int len = 0;
 	int i;
-	if(str==NULL)
+
+	if (str == NULL)
 	{
-		return	(NULL);
+		return	(NULL) ;
 	}
 	while(str[len])
 	{
 		len++;
 	}
-	new_str = malloc(sizeof(char)*(len+1));
+	new_str = malloc(sizeof(char) * (len+1));
 	if(new_str == NULL)
 	{
-		return(NULL);
+		return (NULL) ;
 	}
-	for(i=0;i<= len; i++)
+	for(i=0;i <= len; i++)
 	{
 	new_str[i] = str[i];
 	}
