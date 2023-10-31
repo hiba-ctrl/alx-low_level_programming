@@ -16,21 +16,24 @@ char *_strdup(char *str)
 
 	if (str == NULL)
 	{
-		return	(NULL) ;
+		return	(NULL);
 	}
+
 	while(str[len])
 	{
 		len++;
 	}
+
 	new_str = malloc(sizeof(char) * (len+1));
 	if(new_str == NULL)
 	{
-		return (NULL) ;
-	}
-	for(i=0;i <= len; i++)
-	{
-	new_str[i] = str[i];
+		return (NULL);
 	}
 
-	return new_str;
+	for(i=0;i <= len; i++)
+	{
+		new_str[i] = str[i];
+	}
+
+	return (new_str);
 }
