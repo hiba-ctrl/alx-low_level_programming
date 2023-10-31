@@ -3,7 +3,7 @@
 
 /**
  * _strdup - returns a pointer to a newly allocated space in memory
- * @*str: pointer to string
+ * @str: pointer to string
  *
  * Return: pointer to a newly allocated space in memory
  */
@@ -19,18 +19,18 @@ char *_strdup(char *str)
 		return	(NULL);
 	}
 
-	while(str[len])
+	while (str[len])
 	{
 		len++;
 	}
 
 	new_str = malloc(sizeof(char) * (len+1));
-	if(new_str == NULL)
+	if (new_str == NULL)
 	{
 		return (NULL);
 	}
 
-	for(i=0;i <= len; i++)
+	for (i=0; i <= len; i++)
 	{
 		new_str[i] = str[i];
 	}
