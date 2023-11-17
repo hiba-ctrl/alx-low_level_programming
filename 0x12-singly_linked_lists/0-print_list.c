@@ -27,7 +27,7 @@ size_t print_list(const list_t *h)
 {
     size_t nodes = 0;
 
-    while (h)
+    while (h != NULL)
     {
         _putchar('[');
         if (h->str)
