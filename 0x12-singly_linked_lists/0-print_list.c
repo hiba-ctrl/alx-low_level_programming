@@ -8,7 +8,7 @@
 int _putchar(char c);
 
 /**
- * print_number - Prints an unsigned number.
+ * print_number - Prints an unsigned number character by character.
  * @n: The number to be printed.
  */
 void print_number(unsigned int n)
@@ -26,18 +26,12 @@ void print_number(unsigned int n)
 size_t print_list(const list_t *h)
 {
     size_t nodes = 0;
+    int i;
 
     while (h != NULL)
     {
         _putchar('[');
-        if (h->str)
-        {
-            print_number(h->len);
-            _putchar(']');
-            _putchar(' ');
-            _putchar(h->str);
-        }
-        else
+        if (h->str == NULL)
         {
             _putchar('0');
             _putchar(']');
@@ -47,6 +41,16 @@ size_t print_list(const list_t *h)
             _putchar('i');
             _putchar('l');
             _putchar(')');
+        }
+        else
+        {
+            print_number(h->len);
+            _putchar(']');
+            _putchar(' ');
+            for (i = 0; h->str[i] != '\0'; i++)
+            {
+                _putchar(h->str[i]);
+            }
         }
         _putchar('\n');
         nodes++;
